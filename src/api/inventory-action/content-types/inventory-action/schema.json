@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "inventory_actions",
+  "info": {
+    "singularName": "inventory-action",
+    "pluralName": "inventory-actions",
+    "displayName": "InventoryActions"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Date": {
+      "type": "date"
+    },
+    "Product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product"
+    },
+    "Action": {
+      "type": "enumeration",
+      "enum": [
+        "Receive",
+        "Remove",
+        "Transfer"
+      ]
+    },
+    "TotalChange": {
+      "type": "integer"
+    },
+    "Batch": {
+      "displayName": "Batch",
+      "type": "component",
+      "repeatable": true,
+      "component": "inventory.batch"
+    }
+  }
+}

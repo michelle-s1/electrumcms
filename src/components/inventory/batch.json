@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_inventory_batches",
+  "info": {
+    "displayName": "Batch",
+    "icon": "boxes"
+  },
+  "options": {},
+  "attributes": {
+    "Units": {
+      "type": "integer"
+    },
+    "Description": {
+      "type": "string"
+    },
+    "Photo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}
