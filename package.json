@@ -4,19 +4,24 @@
   "version": "0.1.0",
   "description": "A Strapi application",
   "scripts": {
-    "develop": "strapi develop",
+    "develop": "strapxi develop",
     "start": "strapi start",
     "build": "strapi build",
     "strapi": "strapi"
   },
   "dependencies": {
+    "@offset-dev/strapi-calendar": "0.0.7",
     "@strapi/plugin-i18n": "4.3.3",
     "@strapi/plugin-users-permissions": "4.3.3",
+    "@strapi/provider-email-sendgrid": "^4.3.4",
     "@strapi/strapi": "4.3.3",
     "better-sqlite3": "7.4.6",
     "pg": "^8.7.3",
     "pg-connection-string": "^2.5.0",
-    "strapi-plugin-import-export-entries": "^1.10.1"
+    "strapi-plugin-ezforms": "0.0.7",
+    "strapi-plugin-import-export-entries": "^1.10.1",
+    "strapi-plugin-notes": "^1.0.1",
+    "strapi-stripe": "^2.4.1"
   },
   "author": {
     "name": "A Strapi developer"
