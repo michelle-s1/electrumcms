@@ -2,10 +2,12 @@
 
 const _ = require('lodash');
 const path = require('path');
+const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 
-/* eslint-disable no-unused-vars */
-module.exports = (config, webpack) => {
-  // this includes the folder ./src/admin/assets with the alias assets
+module.exports = (config) => {
+  config.plugins.push(new MonacoWebpackPlugin());
   _.set(config, 'resolve.alias.assets', path.resolve(__dirname, './assets'));
+
+
   return config;
 };
