@@ -4,7 +4,8 @@
   "info": {
     "singularName": "brand",
     "pluralName": "brands",
-    "displayName": "Brands"
+    "displayName": "Brands",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -13,6 +14,22 @@
   "attributes": {
     "Name": {
       "type": "string"
+    },
+    "BigCommerceID": {
+      "type": "integer"
+    },
+    "Logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Description": {
+      "type": "richtext"
     }
   }
 }

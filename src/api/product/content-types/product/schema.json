@@ -4,7 +4,8 @@
   "info": {
     "singularName": "product",
     "pluralName": "products",
-    "displayName": "Products"
+    "displayName": "Products",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -13,6 +14,106 @@
   "attributes": {
     "Name": {
       "type": "string"
+    },
+    "SKU": {
+      "type": "string"
+    },
+    "ShortDescription": {
+      "type": "text"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Photos": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Price": {
+      "type": "float"
+    },
+    "Cost": {
+      "type": "float"
+    },
+    "SalePrice": {
+      "type": "float"
+    },
+    "SaleStart": {
+      "type": "date"
+    },
+    "SaleEnd": {
+      "type": "date"
+    },
+    "Featured": {
+      "type": "boolean"
+    },
+    "Popular": {
+      "type": "boolean"
+    },
+    "New": {
+      "type": "boolean"
+    },
+    "Options": {
+      "type": "boolean"
+    },
+    "Variants": {
+      "displayName": "Variants",
+      "type": "component",
+      "repeatable": true,
+      "component": "variants.variants"
+    },
+    "CurrentStock": {
+      "type": "integer"
+    },
+    "Rating": {
+      "type": "integer",
+      "max": 5
+    },
+    "Reviews": {
+      "type": "integer"
+    },
+    "Categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "inversedBy": "Products"
+    },
+    "Brand": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::brand.brand"
+    },
+    "Wholesale": {
+      "type": "boolean"
+    },
+    "Vendors": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::vendor.vendor",
+      "mappedBy": "Products"
+    },
+    "Customer_works": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::customer-work.customer-work",
+      "inversedBy": "Products"
     }
   }
 }

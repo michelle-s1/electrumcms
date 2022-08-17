@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sticker_submissions",
+  "info": {
+    "singularName": "sticker-submission",
+    "pluralName": "sticker-submissions",
+    "displayName": "StickerSubmissions"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Uploads": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "Accepted": {
+      "type": "boolean"
+    },
+    "Email": {
+      "type": "email"
+    },
+    "Customer": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::customer.customer"
+    },
+    "Submitted": {
+      "type": "datetime"
+    },
+    "AccountCredited": {
+      "type": "boolean"
+    },
+    "Notes": {
+      "type": "richtext"
+    }
+  }
+}

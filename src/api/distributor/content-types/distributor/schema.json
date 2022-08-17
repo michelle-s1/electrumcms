@@ -1,0 +1,84 @@
+{
+  "kind": "collectionType",
+  "collectionName": "distributors",
+  "info": {
+    "singularName": "distributor",
+    "pluralName": "distributors",
+    "displayName": "Distributors"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Company": {
+      "type": "string"
+    },
+    "ContactName": {
+      "type": "string"
+    },
+    "ContactEmail": {
+      "type": "email"
+    },
+    "ContactPhone": {
+      "type": "string"
+    },
+    "PreferredShippingMethod": {
+      "type": "string"
+    },
+    "ShippingAccount": {
+      "type": "string"
+    },
+    "Orders": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::order.order"
+    },
+    "Logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "AccountOwner": {
+      "type": "enumeration",
+      "enum": [
+        "Rob",
+        "Jess",
+        "Cristobal"
+      ]
+    },
+    "ShippingAddress": {
+      "type": "component",
+      "repeatable": true,
+      "component": "address.address"
+    },
+    "PaymentTerms": {
+      "type": "enumeration",
+      "enum": [
+        "Payment Required Before Processing",
+        "Payment Required Before Shipping",
+        "Net30",
+        "Net60",
+        "Net90"
+      ]
+    },
+    "PaymentMethod": {
+      "type": "enumeration",
+      "enum": [
+        "Credit Card",
+        "Check",
+        "ACH",
+        "Wire",
+        "PayPal"
+      ]
+    },
+    "CustomerNotes": {
+      "type": "richtext"
+    }
+  }
+}

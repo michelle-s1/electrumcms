@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "website_carts",
+  "info": {
+    "singularName": "website-cart",
+    "pluralName": "website-carts",
+    "displayName": "WebsiteCarts"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "BigCommerceID": {
+      "type": "integer"
+    },
+    "Customer": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::customer.customer"
+    },
+    "Status": {
+      "type": "enumeration",
+      "enum": [
+        "Live",
+        "Converted",
+        "Abandoned",
+        "Recovered"
+      ]
+    },
+    "Order": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::order.order"
+    },
+    "Currency": {
+      "type": "string"
+    },
+    "CartContents": {
+      "type": "component",
+      "repeatable": true,
+      "component": "line-items.products"
+    },
+    "Value": {
+      "type": "float"
+    },
+    "Converted": {
+      "type": "boolean"
+    }
+  }
+}

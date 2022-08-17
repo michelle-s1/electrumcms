@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_referrals_referrals",
+  "info": {
+    "displayName": "Referrals",
+    "icon": "money-bill-alt"
+  },
+  "options": {},
+  "attributes": {
+    "orders": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::order.order"
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sponsored_artists",
+  "info": {
+    "singularName": "sponsored-artist",
+    "pluralName": "sponsored-artists",
+    "displayName": "SponsoredArtists"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Instagram": {
+      "type": "string"
+    },
+    "ProfilePhoto": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Showcase": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "Email": {
+      "type": "email"
+    },
+    "Phone": {
+      "type": "string"
+    },
+    "ProductPicks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product"
+    },
+    "Referrals": {
+      "displayName": "Referrals",
+      "type": "component",
+      "repeatable": true,
+      "component": "referrals.referrals"
+    },
+    "Credit": {
+      "type": "float"
+    },
+    "Orders": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::order.order"
+    },
+    "Bio": {
+      "type": "richtext"
+    
+    }
+  }
+}

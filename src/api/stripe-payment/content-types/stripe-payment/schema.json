@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stripe_payments",
+  "info": {
+    "singularName": "stripe-payment",
+    "pluralName": "stripe-payments",
+    "displayName": "StripePayments"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "StripePayment": {
+      "type": "json"
+    }
+  }
+}

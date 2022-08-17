@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_address_addresses",
+  "info": {
+    "displayName": "Address",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "StreetAddress1": {
+      "type": "string"
+    },
+    "StreetAddress2": {
+      "type": "string"
+    },
+    "City": {
+      "type": "string"
+    },
+    "State": {
+      "type": "string"
+    },
+    "ZIP": {
+      "type": "string"
+    },
+    "Country": {
+      "type": "string"
+    },
+    "Primary": {
+      "type": "boolean"
+    }
+  }
+}

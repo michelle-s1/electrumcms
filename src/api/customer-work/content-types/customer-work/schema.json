@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "customer_works",
+  "info": {
+    "singularName": "customer-work",
+    "pluralName": "customer-works",
+    "displayName": "CustomerWork"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Customer": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::customer.customer"
+    },
+    "Photos": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "Products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "inversedBy": "Customer_works"
+    },
+    "ArtistNotes": {
+      "type": "richtext"
+    },
+    "Published": {
+      "type": "boolean"
+    },
+    "PointsAwarded": {
+      "type": "boolean"
+    },
+    "Email": {
+      "type": "email"
+    }
+  }
+}

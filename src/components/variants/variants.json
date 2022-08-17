@@ -1,0 +1,44 @@
+{
+  "collectionName": "components_variants_variants",
+  "info": {
+    "displayName": "Variants",
+    "icon": "code-branch"
+  },
+  "options": {},
+  "attributes": {
+    "SKU": {
+      "type": "string"
+    },
+    "Price": {
+      "type": "float"
+    },
+    "Cost": {
+      "type": "float"
+    },
+    "Weight": {
+      "type": "integer"
+    },
+    "VariantPhoto": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "VariantID": {
+      "type": "integer"
+    },
+    "Attributes": {
+      "displayName": "Attributes",
+      "type": "component",
+      "repeatable": true,
+      "component": "variants.attributes"
+    },
+    "CurrentStock": {
+      "type": "integer"
+    }
+  }
+}

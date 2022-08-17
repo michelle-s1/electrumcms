@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_variants_attributes",
+  "info": {
+    "displayName": "Attributes",
+    "icon": "angle-right"
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Value": {
+      "type": "string"
+    }
+  }
+}

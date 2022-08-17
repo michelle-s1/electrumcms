@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_po_line_items",
+  "info": {
+    "displayName": "LineItems",
+    "icon": "shopping-cart"
+  },
+  "options": {},
+  "attributes": {
+    "Product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product"
+    },
+    "Quantity": {
+      "type": "integer"
+    },
+    "Cost": {
+      "type": "float"
+    }
+  }
+}

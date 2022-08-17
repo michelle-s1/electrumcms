@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_notes_notes",
+  "info": {
+    "displayName": "Note",
+    "icon": "sticky-note"
+  },
+  "options": {},
+  "attributes": {
+    "Comments": {
+      "type": "richtext"
+    },
+    "Date": {
+      "type": "datetime"
+    },
+    "User": {
+      "type": "email"
+    }
+  }
+}

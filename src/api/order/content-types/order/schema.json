@@ -1,0 +1,88 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "Orders",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "OrderID": {
+      "type": "integer"
+    },
+    "Source": {
+      "type": "string"
+    },
+    "CustomerEmail": {
+      "type": "email"
+    },
+    "Customer": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::customer.customer"
+    },
+    "ShippingAddress": {
+      "type": "component",
+      "repeatable": false,
+      "component": "address.address"
+    },
+    "BillingAddress": {
+      "type": "component",
+      "repeatable": false,
+      "component": "address.address"
+    },
+    "Products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product"
+    },
+    "Subtotal": {
+      "type": "integer"
+    },
+    "ShippingCost": {
+      "type": "float"
+    },
+    "Discount": {
+      "type": "float"
+    },
+    "TotalPaid": {
+      "type": "float"
+    },
+    "ShippingMethod": {
+      "type": "string"
+    },
+    "Status": {
+      "type": "enumeration",
+      "enum": [
+        "Canceled",
+        "Incomplete",
+        "Awaiting Fulfillment",
+        "Awaiting Payment",
+        "Awaiting Shipment",
+        "Shipped",
+        "Disputed",
+        "Completed"
+      ]
+    },
+    "MFGOrder": {
+      "type": "boolean"
+    },
+    "OrderDate": {
+      "type": "datetime"
+    },
+    "TrackingNumber": {
+      "type": "string"
+    },
+    "CustomerComments": {
+      "type": "richtext"
+    },
+    "StaffNotes": {
+      "type": "richtext"
+    }
+  }
+}
