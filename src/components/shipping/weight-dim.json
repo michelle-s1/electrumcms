@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shipping_weight_dims",
+  "info": {
+    "displayName": "WeightDim",
+    "icon": "box-open"
+  },
+  "options": {},
+  "attributes": {
+    "Type": {
+      "type": "string"
+    },
+    "WeightOz": {
+      "type": "decimal"
+    },
+    "Width": {
+      "type": "integer"
+    },
+    "Height": {
+      "type": "integer"
+    },
+    "Length": {
+      "type": "integer"
+    }
+  }
+}

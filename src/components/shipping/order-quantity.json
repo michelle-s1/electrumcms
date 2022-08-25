@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_shipping_order_quantities",
+  "info": {
+    "displayName": "OrderQuantity",
+    "icon": "box-open",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Size": {
+      "type": "string"
+    },
+    "UnitsIncluded": {
+      "type": "integer"
+    },
+    "ShippingDims": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shipping.weight-dim"
+    },
+    "PricePerUnit": {
+      "type": "decimal"
+    },
+    "SKU": {
+      "type": "string"
+    },
+    "SizeDescription": {
+      "type": "string"
+    }
+  }
+}

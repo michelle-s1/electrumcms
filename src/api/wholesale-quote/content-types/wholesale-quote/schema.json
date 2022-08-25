@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "wholesale_quotes",
+  "info": {
+    "singularName": "wholesale-quote",
+    "pluralName": "wholesale-quotes",
+    "displayName": "WholesaleQuotes",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Distributor": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::distributor.distributor"
+    },
+    "LineItems": {
+      "displayName": "LineItems",
+      "type": "component",
+      "repeatable": true,
+      "component": "line-items.line-items"
+    }
+  }
+}

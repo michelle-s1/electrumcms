@@ -1,0 +1,105 @@
+{
+  "kind": "collectionType",
+  "collectionName": "wholesale_catalogs",
+  "info": {
+    "singularName": "wholesale-catalog",
+    "pluralName": "wholesale-catalogs",
+    "displayName": "WholesaleCatalog",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Options": {
+      "displayName": "OrderQuantity",
+      "type": "component",
+      "repeatable": true,
+      "component": "shipping.order-quantity"
+    },
+    "SKU": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Notes": {
+      "type": "richtext"
+    },
+    "Distributors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::distributor.distributor"
+    },
+    "Thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Gallery": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "SDSSheet": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Restrictions": {
+      "displayName": "Resetrictions",
+      "type": "component",
+      "repeatable": false,
+      "component": "shipping.resetrictions"
+    },
+    "HAZMAT": {
+      "type": "boolean"
+    },
+    "MFG": {
+      "type": "boolean"
+    },
+    "ElectrumInventory": {
+      "type": "integer"
+    },
+    "AmazonInventory": {
+      "type": "integer"
+    },
+    "Category": {
+      "type": "enumeration",
+      "enum": [
+        "Prep/Primer",
+        "Stencil Ink",
+        "Paper",
+        "Cartridges",
+        "Medical",
+        "Furniture",
+        "Accessories"
+      ]
+    },
+    "HTSCode": {
+      "type": "string"
+    }
+  }
+}

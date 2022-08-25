@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shipping_resetrictions",
+  "info": {
+    "displayName": "Resetrictions",
+    "icon": "biohazard"
+  },
+  "options": {},
+  "attributes": {
+    "Reason": {
+      "type": "text"
+    },
+    "RestrictionType": {
+      "type": "enumeration",
+      "enum": [
+        "Carrier",
+        "Distributor",
+        "Country",
+        "Other"
+      ]
+    },
+    "RestrictionName": {
+      "type": "string"
+    }
+  }
+}

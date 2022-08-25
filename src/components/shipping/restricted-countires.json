@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_shipping_restricted_countires",
+  "info": {
+    "displayName": "RestrictedCountires"
+  },
+  "options": {},
+  "attributes": {
+    "Country": {
+      "type": "string"
+    },
+    "Notes": {
+      "type": "richtext"
+    },
+    "Thumbnail": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Gallery": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}
