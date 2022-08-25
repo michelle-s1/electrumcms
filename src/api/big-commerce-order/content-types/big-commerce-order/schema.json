@@ -4,15 +4,12 @@
   "info": {
     "singularName": "big-commerce-order",
     "pluralName": "big-commerce-orders",
-    "displayName": "BigCommerceOrder"
+    "displayName": "BigCommerceOrder",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
   },
   "pluginOptions": {},
-  "attributes": {
-    "Webhook": {
-      "type": "json"
-    }
-  }
+  "attributes": {}
 }
