@@ -11,5 +11,9 @@
     "draftAndPublish": false
   },
   "pluginOptions": {},
-  "attributes": {}
+  "attributes": {
+    "OrderNumber": {
+      "type": "integer"
+    }
+  }
 }
