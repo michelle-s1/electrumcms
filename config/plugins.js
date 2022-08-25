@@ -5,15 +5,15 @@ module.exports = ({ env }) => ({
     'import-export-entries': {
         enabled: true,
     },
-    upload: {
+    'upload': {
         config: {
           provider: 'aws-s3',
           providerOptions: {
-            accessKeyId: env('ACCESS_KEY_ID'),
-            secretAccessKey: env('SECRET_ACCESS_TOKEN'),
-            region: 'us-east-2',
+            accessKeyId: env('AWS_ACCESS_KEY_ID'),
+            secretAccessKey: env('AWS_SECRET_ACCESS_TOKEN'),
+            region: env('AWS_REGION'),
             params: {
-              Bucket: 'electrumstrapi',
+              Bucket: env('AWS_BUCKET'),
             },
           },
           actionOptions: {
