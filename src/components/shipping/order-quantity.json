@@ -26,6 +26,9 @@
     },
     "SizeDescription": {
       "type": "string"
+    },
+    "SuggestedRetail": {
+      "type": "float"
     }
   }
 }

@@ -15,9 +15,6 @@
     "Name": {
       "type": "string"
     },
-    "SKU": {
-      "type": "string"
-    },
     "ShortDescription": {
       "type": "text"
     },
@@ -119,6 +116,11 @@
       "type": "integer",
       "unique": true,
       "default": 76
+    },
+    "SKUs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::sku.sku"
     }
   }
 }

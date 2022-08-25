@@ -26,6 +26,11 @@
     },
     "Unit": {
       "type": "string"
+    },
+    "Location": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::warehouse-location.warehouse-location"
     }
   }
 }

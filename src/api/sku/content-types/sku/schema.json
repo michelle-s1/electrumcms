@@ -4,7 +4,7 @@
   "info": {
     "singularName": "sku",
     "pluralName": "skus",
-    "displayName": "SKU",
+    "displayName": "SKUs",
     "description": ""
   },
   "options": {
@@ -67,6 +67,12 @@
       "type": "component",
       "repeatable": true,
       "component": "inventory.warehouses"
+    },
+    "Retail": {
+      "type": "boolean"
+    },
+    "Wholesale": {
+      "type": "boolean"
     }
   }
 }
