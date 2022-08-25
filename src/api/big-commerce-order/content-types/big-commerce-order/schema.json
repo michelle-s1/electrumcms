@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "big_commerce_orders",
+  "info": {
+    "singularName": "big-commerce-order",
+    "pluralName": "big-commerce-orders",
+    "displayName": "BigCommerceOrder"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Webhook": {
+      "type": "json"
+    }
+  }
+}
