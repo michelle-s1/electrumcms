@@ -30,7 +30,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::product.product",
-      "inversedBy": "Customer_works"
+      "mappedBy": "Customer_works"
     },
     "ArtistNotes": {
       "type": "richtext"

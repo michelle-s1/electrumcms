@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "packagings",
+  "info": {
+    "singularName": "packaging",
+    "pluralName": "packagings",
+    "displayName": "Packaging"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "DesignFiles": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "PreviewFile": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "Product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product"
+    },
+    "DesignSpecs": {
+      "displayName": "Specs",
+      "type": "component",
+      "repeatable": true,
+      "component": "design.specs"
+    },
+    "Printer": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::vendor.vendor"
+    }
+  }
+}

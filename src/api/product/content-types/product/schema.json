@@ -114,6 +114,11 @@
       "relation": "manyToMany",
       "target": "api::customer-work.customer-work",
       "inversedBy": "Products"
+    },
+    "BigCommerceID": {
+      "type": "integer",
+      "unique": true,
+      "default": 76
     }
   }
 }
