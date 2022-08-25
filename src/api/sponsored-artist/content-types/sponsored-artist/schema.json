@@ -4,10 +4,11 @@
   "info": {
     "singularName": "sponsored-artist",
     "pluralName": "sponsored-artists",
-    "displayName": "SponsoredArtists"
+    "displayName": "SponsoredArtists",
+    "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -18,24 +19,26 @@
       "type": "string"
     },
     "ProfilePhoto": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "Showcase": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "Email": {
       "type": "email"
@@ -64,7 +67,6 @@
     },
     "Bio": {
       "type": "richtext"
-    
     }
   }
 }
