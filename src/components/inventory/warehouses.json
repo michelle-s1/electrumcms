@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_inventory_warehouses",
+  "info": {
+    "displayName": "Warehouses",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Stock": {
+      "type": "integer"
+    },
+    "SKU": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sku.sku"
+    }
+  }
+}

@@ -2,25 +2,30 @@
   "collectionName": "components_inventory_batches",
   "info": {
     "displayName": "Batch",
-    "icon": "boxes"
+    "icon": "boxes",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "Units": {
+    "Count": {
       "type": "integer"
     },
     "Description": {
       "type": "string"
     },
     "Photo": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
+    },
+    "Unit": {
+      "type": "string"
     }
   }
 }

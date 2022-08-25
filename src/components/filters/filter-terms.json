@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_filters_filter_terms",
+  "info": {
+    "displayName": "FilterTerms"
+  },
+  "options": {},
+  "attributes": {
+    "Value": {
+      "type": "string"
+    },
+    "Attribute": {
+      "type": "enumeration",
+      "enum": [
+        "Size",
+        "Color",
+        "Grouping",
+        "Configuration",
+        "Style",
+        "Type",
+        "Diameter",
+        "Taper",
+        "Other"
+      ]
+    }
+  }
+}

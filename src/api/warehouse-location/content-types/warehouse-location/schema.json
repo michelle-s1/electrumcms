@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "warehouse_locations",
+  "info": {
+    "singularName": "warehouse-location",
+    "pluralName": "warehouse-locations",
+    "displayName": "WarehouseLocations",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Picture": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Notes": {
+      "type": "richtext"
+    }
+  }
+}

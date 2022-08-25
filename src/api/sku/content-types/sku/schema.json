@@ -1,0 +1,72 @@
+{
+  "kind": "collectionType",
+  "collectionName": "skus",
+  "info": {
+    "singularName": "sku",
+    "pluralName": "skus",
+    "displayName": "SKU",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "SKU": {
+      "type": "string"
+    },
+    "Product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product"
+    },
+    "CurrentStock": {
+      "type": "integer"
+    },
+    "Specs": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shipping.weight-dim"
+    },
+    "LowStock": {
+      "type": "integer"
+    },
+    "UnitsPurchased": {
+      "type": "integer"
+    },
+    "Photos": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Price": {
+      "type": "float"
+    },
+    "Cost": {
+      "type": "float"
+    },
+    "VariantAttributes": {
+      "type": "component",
+      "repeatable": true,
+      "component": "variants.attributes"
+    },
+    "Filter": {
+      "displayName": "FilterTerms",
+      "type": "component",
+      "repeatable": true,
+      "component": "filters.filter-terms"
+    },
+    "Warehouses": {
+      "displayName": "Warehouses",
+      "type": "component",
+      "repeatable": true,
+      "component": "inventory.warehouses"
+    }
+  }
+}

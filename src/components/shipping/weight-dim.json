@@ -2,13 +2,11 @@
   "collectionName": "components_shipping_weight_dims",
   "info": {
     "displayName": "WeightDim",
-    "icon": "box-open"
+    "icon": "box-open",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "Type": {
-      "type": "string"
-    },
     "WeightOz": {
       "type": "decimal"
     },

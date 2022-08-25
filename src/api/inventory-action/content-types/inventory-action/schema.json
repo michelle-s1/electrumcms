@@ -4,7 +4,8 @@
   "info": {
     "singularName": "inventory-action",
     "pluralName": "inventory-actions",
-    "displayName": "InventoryActions"
+    "displayName": "InventoryActions",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -13,11 +14,6 @@
   "attributes": {
     "Date": {
       "type": "date"
-    },
-    "Product": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::product.product"
     },
     "Action": {
       "type": "enumeration",
@@ -35,6 +31,26 @@
       "type": "component",
       "repeatable": true,
       "component": "inventory.batch"
+    },
+    "SKU": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sku.sku"
+    },
+    "PurchaseOrder": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::purchase-order.purchase-order"
+    },
+    "Order": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::order.order"
+    },
+    "Customer": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::customer.customer"
     }
   }
 }
