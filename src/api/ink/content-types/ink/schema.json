@@ -1,0 +1,68 @@
+{
+  "kind": "collectionType",
+  "collectionName": "inks",
+  "info": {
+    "singularName": "ink",
+    "pluralName": "inks",
+    "displayName": "Inks"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Ink": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product"
+    },
+    "CustomerWork": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::customer-work.customer-work"
+    },
+    "Brand": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::brand.brand"
+    },
+    "HEX": {
+      "type": "string"
+    },
+    "Thumbnail": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Type": {
+      "type": "enumeration",
+      "enum": [
+        "Individual",
+        "Set"
+      ]
+    },
+    "ArtistSeries": {
+      "type": "string"
+    },
+    "ColorGroup": {
+      "type": "enumeration",
+      "enum": [
+        "Reds",
+        "Oranges",
+        "Yellows",
+        "Greens",
+        "Blues",
+        "Purples",
+        "Blacks",
+        "Whites",
+        "Greys",
+        "Browns"
+      ]
+    }
+  }
+}

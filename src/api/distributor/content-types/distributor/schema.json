@@ -79,6 +79,12 @@
     },
     "CustomerNotes": {
       "type": "richtext"
+    },
+    "LinesCarried": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::electrum-line.electrum-line",
+      "inversedBy": "Distributors"
     }
   }
 }

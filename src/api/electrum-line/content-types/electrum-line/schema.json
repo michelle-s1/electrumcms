@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "electrum_lines",
+  "info": {
+    "singularName": "electrum-line",
+    "pluralName": "electrum-lines",
+    "displayName": "ElectrumLine"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "Products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product"
+    },
+    "Distributors": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::distributor.distributor",
+      "inversedBy": "LinesCarried"
+    },
+    "Logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "Description": {
+      "type": "richtext"
+    }
+  }
+}

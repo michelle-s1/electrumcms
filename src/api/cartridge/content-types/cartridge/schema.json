@@ -1,0 +1,65 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cartridges",
+  "info": {
+    "singularName": "cartridge",
+    "pluralName": "cartridges",
+    "displayName": "Cartridges",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "SKU": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sku.sku"
+    },
+    "Type": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product"
+    },
+    "Line": {
+      "type": "enumeration",
+      "enum": [
+        "Gold Standard",
+        "Cheyenne Safety",
+        "Cheyenne Craft",
+        "Electrum Traditions"
+      ]
+    },
+    "Rendering": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "Brand": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::brand.brand"
+    },
+    "CartridgeSpecs": {
+      "displayName": "CartridgeSpecs",
+      "type": "component",
+      "repeatable": false,
+      "component": "cartridges.cartridge-specs"
+    },
+    "Use": {
+      "type": "richtext"
+    },
+    "customer_works": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::customer-work.customer-work"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "collectionName": "components_cartridges_cartridge_specs",
+  "info": {
+    "displayName": "CartridgeSpecs",
+    "icon": "map-pin",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Diameter": {
+      "type": "string"
+    },
+    "Taper": {
+      "type": "string"
+    },
+    "Size": {
+      "type": "string"
+    },
+    "Guage": {
+      "type": "string"
+    },
+    "Type": {
+      "type": "enumeration",
+      "enum": [
+        "Cartridge",
+        "Needles on Bar"
+      ]
+    },
+    "Grouping": {
+      "type": "enumeration",
+      "enum": [
+        "Flat",
+        "Round Shader",
+        "Magnum",
+        "Bugpin Magnum",
+        "Bugpin Round Liner",
+        "Bugpin Curved Magnum",
+        "Liner",
+        "Power Liner",
+        "Round Liner",
+        "Round Liner Tight",
+        "Round Liner Super Tight"
+      ]
+    }
+  }
+}

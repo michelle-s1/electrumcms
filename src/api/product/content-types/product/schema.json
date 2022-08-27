@@ -121,6 +121,9 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::sku.sku"
+    },
+    "Slug": {
+      "type": "string"
     }
   }
 }
