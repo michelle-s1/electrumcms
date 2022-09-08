@@ -60,6 +60,16 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::customer-work.customer-work"
+    },
+    "DotProfile": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
