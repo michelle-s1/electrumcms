@@ -4,32 +4,47 @@
   "info": {
     "singularName": "category",
     "pluralName": "categories",
-    "displayName": "category"
+    "displayName": "Categories",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
-    "name": {
-      "type": "string",
-      "required": true
+    "Name": {
+      "type": "string"
     },
-    "slug": {
-      "type": "uid",
-      "targetField": "name"
+    "Thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
     },
-    "restaurants": {
+    "BigCommerceID": {
+      "type": "integer"
+    },
+    "Visible": {
+      "type": "boolean"
+    },
+    "Description": {
+      "type": "richtext"
+    },
+    "Products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "mappedBy": "Categories"
+    },
+    "parent_categories": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::restaurant.restaurant",
-      "mappedBy": "category"
-    },
-    "articles": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::article.article",
-      "mappedBy": "category"
+      "target": "api::category.category"
     }
   }
 }

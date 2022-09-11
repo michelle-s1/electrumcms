@@ -86,6 +86,12 @@
     "Reviews": {
       "type": "integer"
     },
+    "Categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "inversedBy": "Products"
+    },
     "Brand": {
       "type": "relation",
       "relation": "oneToOne",

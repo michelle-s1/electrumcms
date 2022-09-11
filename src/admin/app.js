@@ -52,20 +52,5 @@ export default {
     notifications: { release: false },
   },
 
-  bootstrap(app) {app.injectContentManagerComponent("listView", "actions", {
-    name: "DraftFilterButton",
-    Component: DraftFilterButton,
-  });
-  app.injectContentManagerComponent("editView", "right-links", {
-    name: "PreviewButton",
-    Component: PreviewButton,
-  });
-  app.injectContentManagerComponent("editView", "right-links", {
-    name: "InternalComment",
-    Component: InternalComment,
-  });
-  app.injectContentManagerComponent("editView", "right-links", {
-    name: "TweetButton",
-    Component: TweetButton,
-  });},
+  bootstrap() {},
 };
