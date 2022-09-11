@@ -12,6 +12,7 @@
   "dependencies": {
     "@mui/x-date-pickers": "^5.0.0-beta.5",
     "@offset-dev/strapi-calendar": "0.0.7",
+    "@strapi/plugin-graphql": "^4.3.3",
     "@strapi/plugin-i18n": "4.3.3",
     "@strapi/plugin-users-permissions": "4.3.3",
     "@strapi/provider-email-sendgrid": "^4.3.4",
