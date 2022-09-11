@@ -4,54 +4,47 @@
   "info": {
     "singularName": "review",
     "pluralName": "reviews",
-    "displayName": "Reviews",
-    "description": ""
+    "displayName": "review"
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
-    "Title": {
-      "type": "string"
+    "content": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "text"
     },
-    "Review": {
-      "type": "string"
-    },
-    "Images": {
-      "type": "media",
-      "multiple": true,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
-    "Date": {
-      "type": "date"
-    },
-    "User": {
-      "type": "email"
-    },
-    "Rating": {
+    "note": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
       "type": "integer",
+      "required": true,
       "max": 5,
       "min": 1
     },
-    "Publish": {
-      "type": "boolean"
-    },
-    "Product": {
+    "author": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::product.product"
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "reviews"
     },
-    "Order": {
+    "restaurant": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::order.order"
+      "relation": "manyToOne",
+      "target": "api::restaurant.restaurant",
+      "inversedBy": "reviews"
     }
   }
 }

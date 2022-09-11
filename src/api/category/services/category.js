@@ -4,6 +4,6 @@
  * category service.
  */
 
-const { createCoreService } = require('@strapi/strapi').factories;
+const { createCoreService } = require("@strapi/strapi").factories;
 
-module.exports = createCoreService('api::category.category');
+module.exports = createCoreService("api::category.category");

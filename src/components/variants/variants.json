@@ -2,7 +2,8 @@
   "collectionName": "components_variants_variants",
   "info": {
     "displayName": "Variants",
-    "icon": "code-branch"
+    "icon": "code-branch",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -19,14 +20,15 @@
       "type": "integer"
     },
     "VariantPhoto": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "VariantID": {
       "type": "integer"
@@ -39,6 +41,11 @@
     },
     "CurrentStock": {
       "type": "integer"
+    },
+    "VariantSKU": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sku.sku"
     }
   }
 }
