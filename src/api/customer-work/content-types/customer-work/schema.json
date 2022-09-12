@@ -26,12 +26,6 @@
       "type": "media",
       "multiple": true
     },
-    "Products": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::product.product",
-      "mappedBy": "Customer_works"
-    },
     "ArtistNotes": {
       "type": "richtext"
     },

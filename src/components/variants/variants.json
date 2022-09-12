@@ -2,43 +2,51 @@
   "collectionName": "components_variants_variants",
   "info": {
     "displayName": "Variants",
-    "icon": "code-branch"
+    "icon": "code-branch",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "SKU": {
+    "sku": {
       "type": "string"
     },
-    "Price": {
-      "type": "float"
+    "price": {
+      "type": "decimal"
     },
-    "Cost": {
-      "type": "float"
+    "cost": {
+      "type": "decimal"
     },
-    "Weight": {
+    "weight": {
       "type": "integer"
     },
-    "VariantPhoto": {
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
-    "VariantID": {
+    "bigcommerce_id": {
       "type": "integer"
     },
-    "Attributes": {
-      "displayName": "Attributes",
+    "stock": {
+      "type": "integer"
+    },
+    "color": {
+      "type": "string"
+    },
+    "color_name": {
+      "type": "string"
+    },
+    "sizes": {
+      "displayName": "sizes",
       "type": "component",
       "repeatable": true,
-      "component": "variants.attributes"
-    },
-    "CurrentStock": {
-      "type": "integer"
+      "component": "product-size.sizes"
     }
   }
 }

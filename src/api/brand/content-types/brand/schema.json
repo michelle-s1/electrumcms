@@ -4,7 +4,7 @@
   "info": {
     "singularName": "brand",
     "pluralName": "brands",
-    "displayName": "Brands",
+    "displayName": "product-brands",
     "description": ""
   },
   "options": {
@@ -12,13 +12,13 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Name": {
+    "name": {
       "type": "string"
     },
-    "BigCommerceID": {
+    "bigcommerce_id": {
       "type": "integer"
     },
-    "Logo": {
+    "logo": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -29,8 +29,13 @@
         "audios"
       ]
     },
-    "Description": {
+    "description": {
       "type": "richtext"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product"
     }
   }
 }

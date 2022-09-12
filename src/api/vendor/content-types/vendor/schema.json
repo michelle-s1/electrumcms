@@ -24,12 +24,6 @@
     "PointOfContact": {
       "type": "string"
     },
-    "Products": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::product.product",
-      "inversedBy": "Vendors"
-    },
     "OrderingNotes": {
       "type": "richtext"
     },

@@ -2,13 +2,11 @@
   "collectionName": "components_variants_attributes",
   "info": {
     "displayName": "Attributes",
-    "icon": "angle-right"
+    "icon": "angle-right",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "Name": {
-      "type": "string"
-    },
     "Value": {
       "type": "string"
     }

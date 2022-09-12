@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_product_size_sizes",
+  "info": {
+    "displayName": "sizes",
+    "icon": "exchange-alt"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    }
+  }
+}

@@ -4,7 +4,7 @@
   "info": {
     "singularName": "product",
     "pluralName": "products",
-    "displayName": "Products",
+    "displayName": "products",
     "description": ""
   },
   "options": {
@@ -12,16 +12,17 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Name": {
+    "name": {
       "type": "string"
     },
-    "ShortDescription": {
-      "type": "text"
+    "slug": {
+      "type": "string",
+      "unique": true
     },
-    "Description": {
+    "description": {
       "type": "richtext"
     },
-    "Thumbnail": {
+    "thumbnail": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -32,7 +33,7 @@
         "audios"
       ]
     },
-    "Photos": {
+    "pictures": {
       "type": "media",
       "multiple": true,
       "required": false,
@@ -43,86 +44,62 @@
         "audios"
       ]
     },
-    "Price": {
-      "type": "float"
+    "price": {
+      "type": "decimal"
     },
-    "Cost": {
-      "type": "float"
+    "cost": {
+      "type": "integer"
     },
-    "SalePrice": {
-      "type": "float"
+    "sale_price": {
+      "type": "decimal"
     },
-    "SaleStart": {
-      "type": "date"
-    },
-    "SaleEnd": {
-      "type": "date"
-    },
-    "Featured": {
+    "featured": {
       "type": "boolean"
     },
-    "Popular": {
+    "top": {
       "type": "boolean"
     },
-    "New": {
+    "new": {
       "type": "boolean"
     },
-    "Options": {
+    "options": {
       "type": "boolean"
     },
-    "Variants": {
+    "variants": {
       "displayName": "Variants",
       "type": "component",
       "repeatable": true,
       "component": "variants.variants"
     },
-    "CurrentStock": {
+    "stock": {
       "type": "integer"
     },
-    "Rating": {
+    "ratings": {
       "type": "integer",
       "max": 5
     },
-    "Reviews": {
+    "review": {
       "type": "integer"
     },
-    "Categories": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::category.category",
-      "inversedBy": "Products"
-    },
-    "Brand": {
+    "brand": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::brand.brand"
     },
-    "Wholesale": {
+    "wholesale": {
       "type": "boolean"
     },
-    "Vendors": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::vendor.vendor",
-      "mappedBy": "Products"
-    },
-    "Customer_works": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::customer-work.customer-work",
-      "inversedBy": "Products"
-    },
-    "BigCommerceID": {
+    "bigcommerce_id": {
       "type": "integer",
       "unique": true,
       "default": 76
     },
-    "SKUs": {
+    "category": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::sku.sku"
+      "target": "api::category.category"
     },
-    "Slug": {
+    "sku": {
       "type": "string"
     }
   }

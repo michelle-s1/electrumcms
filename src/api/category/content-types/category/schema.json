@@ -12,10 +12,10 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Name": {
+    "name": {
       "type": "string"
     },
-    "Thumbnail": {
+    "thumbnail": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -26,25 +26,24 @@
         "audios"
       ]
     },
-    "BigCommerceID": {
+    "bigcommerce_id": {
       "type": "integer"
     },
-    "Visible": {
+    "visible": {
       "type": "boolean"
     },
-    "Description": {
+    "description": {
       "type": "richtext"
-    },
-    "Products": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::product.product",
-      "mappedBy": "Categories"
     },
     "parent_categories": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::category.category"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product"
     }
   }
 }
